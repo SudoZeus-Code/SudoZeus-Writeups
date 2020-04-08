@@ -20,10 +20,25 @@ layout: default
 - Web Application Hacking
 
 
-### Small image
+# Defcon 27               2019
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+![](images/defcon/20190809_144407.jpg)
 
-### Large image
+![](images/defcon/20190809_110014.jpg)
 
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+![](images/defcon/20190810_133743.jpg)
+
+![](images/defcon/20190724_200513.jpg)
+
+![](images/defcon/20190810_133545.jpg)
+
+![](images/defcon/20190810_133533.jpg)
+
+![](images/defcon/20190810_133613.jpg)
+
+![](images/defcon/20190810_195803_001.jpg)
+
+![](images/defcon/20190811_122856.jpg)
+
+![](images/defcon/20190811_122933.jpg)
+
