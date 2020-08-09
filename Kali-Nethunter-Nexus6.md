@@ -323,12 +323,14 @@ Have fun checking out the rest of Nethunter!
 
 ![](images/nexus6/twrp_magisk/Nethunter/Nethunter_YOURDONE!.jpg)
 
-## After thoughts or troubles. 
+## After thoughts and troubles. 
 
 This guide was created to help other cyber security students and professionals with minimal android development knowledge to
 successfully install Nethunter onto a Nexus 6 device. If you experience any issues when following this guide please do your 
 due diligence in researching the topic of rooting and what you are doing to the device! If you have done this 
 are you are still stumped feel free to reach out to me at SudoZeus@protonmail.ch or on Instagram @sudo_zeus! 
+
+Special thanks to sh3ll3.t0r, a good friend and cyber security professional who helped me in this process! Follow him on Instagram @sh3lle.t0r.
 
 Happy hacking.
 
