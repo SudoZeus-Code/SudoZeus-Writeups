@@ -1,0 +1,371 @@
+I"�;<p><em>Please view all instruction as educational and for learning purposes ONLY. Use of these examples against targets in the real world without permission is unethical and illegal…</em></p>
+
+<h2 id="kali-nethunter-install-tutorial">Kali Nethunter Install Tutorial</h2>
+
+<p>This tutorial covers how to do a fresh install of Kali Nethunter onto a rooted Nexus 6. 
+In writing this the author assumes you already have a familiarity with windows command prompt and the windows OS and an understanding
+of what rooting a phone does as well as the dangers.  <span style="color: red;">YOU CAN BRICK YOUR DEVICE IF YOU ARE NOT CAREFUL</span>. I am not responsible if you 
+do somehow damage or brick your device. Do your research and understand the risks involved with this process. 
+If you use another device besides the Nexus 6 I cannot garuentee it will work but the steps should be similar. Please go read up on the xda fourms for your SPECIFIC DEVICE BEFORE attempting to root it. Here are the xda fourms I visited for this project.</p>
+
+<p><span style="color: cyan;">https://forum.xda-developers.com/google-nexus-5/help/faq-to-android-read-post-root-t2508292</span></p>
+
+<p>and</p>
+
+<p><span style="color: cyan;">https://forum.xda-developers.com/nexus-6/general/how-to-nexus-6-one-beginners-guide-t2948481</span></p>
+
+<p>If your nexus device is fresh out of the box please set it up with no password or pin. Also take a backup of pictures and contacts
+before because the phone data will be erased.</p>
+
+<p>This guide consists of 3 parts</p>
+<ul>
+  <li>1) Gathering nessessary tools and files and installing Nexus root kit drivers.</li>
+  <li>2) Booting to a custom recovery image (TWRP) and rooting the phone (Magisk).</li>
+  <li>3) Flashing and installing Kali Nethunter.</li>
+</ul>
+
+<h2 id="hardware-requirements">Hardware Requirements</h2>
+
+<ul>
+  <li>
+    <p>Desktop Computer or Laptop</p>
+  </li>
+  <li>
+    <p>Nexus 6</p>
+  </li>
+  <li>
+    <p>Micro USB Charging Cable</p>
+  </li>
+</ul>
+
+<h2 id="emotional-requirements">Emotional Requirements</h2>
+
+<ul>
+  <li>
+    <p>Patience</p>
+  </li>
+  <li>
+    <p>Determination</p>
+  </li>
+</ul>
+
+<h2 id="step-1-software-requirements">STEP 1) Software Requirements</h2>
+
+<p>Start by downloading the files below.</p>
+
+<p>Now download the required tools.</p>
+
+<ul>
+  <li>
+    <p>Android SDK Platform Tools</p>
+
+    <p><span style="color: cyan;">https://developer.android.com/studio/releases/platform-tools#download</span></p>
+  </li>
+</ul>
+
+<p>Download and unzip.</p>
+
+<p><img src="images/nexus6/sdk_Download.PNG" alt="" />
+Don’t forget where you put it…</p>
+
+<ul>
+  <li>
+    <p>Nexus root toolkit</p>
+
+    <p>https://nexus-root.com/download/</p>
+  </li>
+</ul>
+
+<p><img src="images/nexus6/NRT_Download.PNG" alt="" /></p>
+
+<p>Go ahead and save/run the executable.</p>
+
+<p><img src="images/nexus6/nrt.png" alt="" /></p>
+
+<p>Install.</p>
+
+<p><img src="images/nexus6/nrt_install_1.PNG" alt="" /></p>
+
+<p>At this point it asks for our device.</p>
+
+<p><img src="images/nexus6/nrt_install_2.PNG" alt="" /></p>
+
+<p>I simply used the auto detect option</p>
+
+<p><img src="images/nexus6/NRT_autodetect.PNG" alt="" /></p>
+
+<p>Here we can see the NRT main menu and log file. 
+We will stop here to download the nessessary .apk and .zip files.</p>
+
+<h2 id="files-requirements">Files Requirements</h2>
+
+<ul>
+  <li>
+    <p>Magisk</p>
+
+    <p>https://magisk.me/</p>
+
+    <p>Magisk is the “app” that will allow us to have root privalages on our Nexus 6.
+  Here is the main web page.</p>
+  </li>
+</ul>
+
+<p><img src="images/nexus6/magisk_main.PNG" alt="" /></p>
+
+<p>When you scroll down the page you will see the downloads. You will download 2 files. One is the flashable zip file and the other is the Magisk app that will be installed.</p>
+
+<p><img src="images/nexus6/magisk_2apps.PNG" alt="" /></p>
+
+<p>The download link takes you to another page so make sure you scroll down past the ads to get the real download…</p>
+
+<p><img src="images/nexus6/magisk_go_down.PNG" alt="" /></p>
+
+<ul>
+  <li>
+    <p>TWRP Recovery</p>
+
+    <p>https://dl.twrp.me/shamu/twrp-3.0.2-0-shamu.img.html</p>
+
+    <p>This will be our custom recovery that will allow us to boot and install Magisk.</p>
+  </li>
+  <li>
+    <p>Kali Nethunter</p>
+
+    <p>https://www.offensive-security.com/kali-linux-nethunter-download/</p>
+
+    <p>Scroll down the page and find the Nexus 6 Nougat download.</p>
+  </li>
+</ul>
+
+<p><img src="images/nexus6/nethunterzip.PNG" alt="" /></p>
+
+<ul>
+  <li>
+    <p>Stock Image</p>
+
+    <p>https://developers.google.com/android/images#shamu</p>
+
+    <p>I downloaded the stock img for my Nexus 6 build number. Yours may be slightly different. 
+  To check your build number open your Nexus device, go to settings &gt; about phone &gt; go to bottom.
+  Mine was NBD91P.</p>
+  </li>
+</ul>
+
+<p><img src="images/nexus6/factory_img.PNG" alt="" /></p>
+
+<h2 id="starting-the-process">Starting the process.</h2>
+
+<p>After we have all the required files and software we can begin to install our software. 
+One more tip that will help your anixety in this process is to be patient. Sometimes Nexus Root Toolkit
+will ask you to wait, you need to have a shred of confidence in the tool and let it run its course. DO NOT close 
+unless you are sure it is hanging. 9/10 times it is just running like normal just let it run.</p>
+
+<p><img src="images/nexus6/nrt_main.PNG" alt="" /></p>
+
+<p>Click the install drivers button and CAREFULLY and METICLOSLY follow each step.</p>
+
+<p><img src="images/nexus6/nrt_drivers.PNG" alt="" /></p>
+
+<p>If everything is done correctly you will run the Full Driver Test and get these results in your logs. If done successfully your phone will also be rebooted from the PC.</p>
+
+<p><img src="images/nexus6/nrt_drivers_installed.PNG" alt="" /></p>
+
+<p>If your phone reboots successfully but you see this image hanging for more then 5 min you need to go into your phone and turn on usb file transfer. See below. The phone should remain plugged in while doing this…..</p>
+
+<p><img src="images/nexus6/nrt_waiting_for_your.PNG" alt="" /></p>
+
+<p><img src="images/nexus6/nexus_pull.jpg" alt="" /></p>
+
+<p><img src="images/nexus6/nexus_pulldown.jpg" alt="" /></p>
+
+<p>Once changing it to file transfer you should see this success messege from Nexus Root Kit!</p>
+
+<p><img src="images/nexus6/nrt_success.PNG" alt="" /></p>
+
+<p>UNLOCK OEM SHOULD BE HERE</p>
+
+<p>Lets move all our files over to the phone.</p>
+
+<p><img src="images/nexus6/copy_files.PNG" alt="" /></p>
+
+<p>Now making sure your phone is plugged in and that you can see internal storage, open your file explorer to where
+you placed your Android SDK Platform Tools and copy this path into a command prompt. If you are confused about this part
+please stop and google “Traverseing the windows file system in CMD”. In this step we will be flashing the custom TWRP recovery image to our phone. 
+From here we will install Magisk and root the phone!</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.\adb devices
+</code></pre></div></div>
+<p>We can see below that my device has been identified. If you do not see your device try to enable file sharing on the nexus 
+device or plug in your phone.</p>
+
+<p><img src="images/nexus6/twrp_magisk/cli1.png" alt="" /></p>
+
+<p>Next you will reboot to the android bootloader.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.\adb reboot bootloader
+</code></pre></div></div>
+<p><img src="images/nexus6/twrp_magisk/cli2.PNG" alt="" /></p>
+
+<p>Now you will run several fastboot commands. When you look at my output below, notice that I placed the full path (C:) to the TWRP image I downloaded. To
+do this either navigate to the file and copy the path from the top bar of file explorer, or simplpy drag and drop the file
+into the command prompt.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.\fastboot flash recovery "C:\PATH\TO\YOUR\TWRP-FILE.IMG"
+</code></pre></div></div>
+<p>Once you run this command below your phone will boot to TWRP custom recovery!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.\fastboot boot "C:\PATH\TO\YOUR\TWRP-FILE.IMG"
+</code></pre></div></div>
+
+<p><img src="images/nexus6/twrp_magisk/cli3.PNG" alt="" /></p>
+
+<p>After swiping on the modification button we see the main TWRP menu system. 
+Select the Install option…</p>
+
+<p><img src="images/nexus6/twrp_magisk/Twrp_magisk1.jpg" alt="" /></p>
+
+<p>Browse to where you copied the files onto your nexus internal storeage. For me it was Download.
+Select the Magiskv20.4.zip and press Install Image…</p>
+
+<p><img src="images/nexus6/twrp_magisk/Twrp_magisk2.jpg" alt="" /></p>
+
+<p>Swipe to confirm flash…</p>
+
+<p><img src="images/nexus6/twrp_magisk/Twrp_magisk3.jpg" alt="" /></p>
+
+<p>If your file is not corrupted you should see a successful insall.</p>
+
+<p><img src="images/nexus6/twrp_magisk/Twrp_magisk4.jpg" alt="" /></p>
+
+<p>Press Reboot System.</p>
+
+<p><img src="images/nexus6/twrp_magisk/Twrp_magisk5.jpg" alt="" /></p>
+
+<p>When the phone reboots go into your apps and check to see if the Magisk Manager was isntalled.
+If it was drag Magisk onto the homescreen as it will save you time.
+Open Magisk Manager…</p>
+
+<p><img src="images/nexus6/twrp_magisk/magisk1.jpg" alt="" /></p>
+
+<p>Ensure that both Magiask and the Manager are up to date and isntalled.</p>
+
+<p><img src="images/nexus6/twrp_magisk/magisk3.jpg" alt="" /></p>
+
+<p>When we click the upper left menu we see that SuperUser is an option.</p>
+
+<p>Congragulations you have successfully rooted your Nexus 6!</p>
+
+<p><img src="images/nexus6/twrp_magisk/Magisk4.jpg" alt="" /></p>
+
+<h2 id="flashing-nethutner">Flashing Nethutner</h2>
+
+<p>Because we have Magisk installed we should be able to access the bootloader and boot
+to our custom recovery image, TWRP.</p>
+
+<p>Hold the power and shut the phone off
+Once it is off power it back up by pressing power + volume down at the same time. 
+This will boot you to recovery. For a faster option plug your phone in and run these two commands again.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.\adb devices
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.\adb reboot bootloader
+</code></pre></div></div>
+
+<p>Here we can move up the menu by the volume up button until we reach the Recovery option.
+Press the power button once to select.</p>
+
+<p><img src="images/nexus6/twrp_magisk/Twrp_recovery.jpg" alt="" /></p>
+
+<p>Just like when we installed Magisk, select the nethunter image and swipe to install.</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter_install.jpg" alt="" /></p>
+
+<p>We see it is loading up! Please be patient as we see it can take up to 25 minuetes. This only took
+about 7 min for me. When it is finished reboot.</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter_25min.jpg" alt="" /></p>
+
+<p>I hope dear reader that when you finish the last step you boot to this beautiful image.</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter/Nethunter_bootimg.jpg" alt="" /></p>
+
+<p>After boot we also see the kali home screen.</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter/Nethunter_mainscreen.jpg" alt="" /></p>
+
+<p>Drag all the nethunter related apps to the home screen for easier use. 
+DONT OPEN ANY OF THEM JUST YET…
+Open the nethunter app first. It is the gray one.</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter/Nethunter_apps.jpg" alt="" /></p>
+
+<p>This next part is the whole reason we installed the Magisk app. Magisk allows us to grant apps
+super user or root access. Go ahead and press GRANT…</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter/Nethunter_grant.jpg" alt="" /></p>
+
+<p>Now you need to grant Kali chroot access. Open the side menu and select
+the Kali Chroot Manager…</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter/Nethunter_chroot.jpg" alt="" /></p>
+
+<p>On the bottom left click START KALI CHROOT…</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter/Nethunter_chroot_start.jpg" alt="" /></p>
+
+<p>Now Nethunter has chroot access and you can access the full potential of your Nexus 6 Kali Nethunter!</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter/Nethunter_chrooted.jpg" alt="" /></p>
+
+<p>Have fun checking out the rest of Nethunter!</p>
+
+<p><img src="images/nexus6/twrp_magisk/Nethunter/Nethunter_YOURDONE!.jpg" alt="" /></p>
+
+<h2 id="after-thoughts-or-troubles">After thoughts or troubles.</h2>
+
+<p>This guide was created to help other cyber security students and professionals with minimal android development knolodge to
+successfully install Nethunter onto a Nexus 6 device. If you experience any issues when following this guide please do your 
+due dilligance in reasearching the topic of rooting and what you are actually doing to the device! If you have done this 
+are you are still stumped feel free to reach out to me at SudoZeus@protonmail.ch or on instagram @sudo_zeus!</p>
+
+<p>Happy hacking.</p>
+
+<p>sudo_zeus</p>
+
+<ul>
+  <li>port 80 - http
+<em>CSEC is a vulnerable machine located on vulnhub. https://www.vulnhub.com/entry/basic-pentesting-1,216/
+Many thanks to Josiah Pierce</em></li>
+</ul>
+
+<p><img src="images/nmap.PNG" alt="" /></p>
+
+<p>I started with a port and version scan using nmap. As we can see it revealed several regularly used ports.</p>
+<ul>
+  <li>port 21 - ftp</li>
+  <li>port 22 - ssh</li>
+  <li>port 80 - http</li>
+</ul>
+
+<p>With the service versions that were returned by nmap I employed searchsploit to see if there was any low hanging fruit, beginning with FTP.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>searchsploit proftpd-1.3.3c
+</code></pre></div></div>
+<p>What came back was a Metasploit module for backdoor command execution.
+Booting up Metasploit I ran a search command for the module, assigned it for use, and set the parameters.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use unix/ftp/proftdp_133c_backdoor
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set RHOSTS &lt;ip&gt;
+</code></pre></div></div>
+<p>I used the <span style="color: red;">show missing</span> command to see if I had overlooked any options for the exploit, and when I was absolutely sure everything was correct, typed <span style="color: red;">run</span> and initiated my attack.</p>
+
+<p><img src="images/whoami.PNG" alt="" /></p>
+
+<p>The reverse tcp shell was successful. 
+After issuing a <span style="color: red;">whoami</span> command and watching <span style="color: red;">root</span> return it was time to see what other avenues I could find.</p>
+
+<p>With my backdoor already in place I decided to pull the hashed passwords and try to crack them offline. I ran a <span style="color: red;">cat</span> command on both <span style="color: red;">/etc/shadow</span> and <span style="color: red;">/etc/passwd</span> and copied the output back to .txt files on my attacking machine named shadow.txt and passwd.txt respectively.</p>
+
+<p><img src="images/etc-passwd.PNG" alt="" /></p>
+
+<p><a href="./">Back</a></p>
+:ET

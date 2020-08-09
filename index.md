@@ -2,22 +2,16 @@
 layout: default
 ---
 
+# **Kali Nethunter Install Tutorial**
+
+* [Nexus 6 Nethunter](./Kali-Nethunter-Nexus6.html).
+
 # **Exploitation Writeups**
 
 * [VulnHub](./VulnHub.html).
 
 * [Hack The Box](./Hack-The-Box.html).
 
-
-
-### Other things I’m working on ...
-
-- CEH certification 
-- MITM WIFI poral, writing in bash and python
-- Various CTF Challenges
-- Arduino Projects
-- Over The Wire: Bandit 
-- Web Application Hacking
 
 
 # Defcon 27               2019
