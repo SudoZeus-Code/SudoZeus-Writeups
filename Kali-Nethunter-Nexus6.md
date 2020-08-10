@@ -257,7 +257,7 @@ Congratulations you have successfully rooted your Nexus 6!
 ![](images/nexus6/twrp_magisk/Magisk4.jpg)
 
 
-## STEP3) Flashing Nethutner
+## STEP 3) Flashing Nethutner
 
 Because we have Magisk installed we should be able to access the bootloader and boot
 to our custom recovery image, TWRP.
@@ -330,7 +330,7 @@ successfully install Nethunter onto a Nexus 6 device. If you experience any issu
 due diligence in researching the topic of rooting and what you are doing to the device! If you have done this 
 are you are still stumped feel free to reach out to me at SudoZeus@protonmail.ch or on Instagram @sudo_zeus! 
 
-Special thanks to sh3ll3.t0r, a good friend and cyber security professional who helped me in this process! Follow him on Instagram @sh3lle.t0r.
+Special thanks to sh3ll3.t0r, a good friend and cyber security professional who helped me in this process! Follow him on Instagram @sh3ll3.t0r.
 
 Happy hacking.
 
